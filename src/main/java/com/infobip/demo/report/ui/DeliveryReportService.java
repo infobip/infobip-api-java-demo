@@ -5,15 +5,28 @@ import com.infobip.demo.report.DeliveryReportAdapter;
 import javafx.concurrent.Service;
 import javafx.concurrent.Task;
 
+/**
+ * DeliveryReportService extends {@link Service} and wraps invocation of
+ * {@link DeliveryReportAdapter#getDeliveryReportWithId(String)} into a {@link Task} so that the blockin
+ * getDeliveryReportWithId can be processed of the UI thread.
+ */
 public class DeliveryReportService extends Service<DeliveryReport> {
 
     private final DeliveryReportAdapter deliveryReportAdapter;
     private String messageId;
 
+    /**
+     * @param deliveryReportAdapter that will be called from the {@link Task#call()} method
+     */
     public DeliveryReportService(DeliveryReportAdapter deliveryReportAdapter) {
         this.deliveryReportAdapter = deliveryReportAdapter;
     }
 
+    /**
+     * This method should be called before each invocation of {@link Service#start()} method.
+     * @param messageId that is passed along to the {@link DeliveryReportAdapter#getDeliveryReportWithId(String)}
+     *                  method from within {@link Task}.
+     */
     public void setMessageId(String messageId) {
         this.messageId = messageId;
     }

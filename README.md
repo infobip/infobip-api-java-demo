@@ -15,7 +15,7 @@ After that you should be left with a local copy of this repository. To install t
 
 	mvn install
 	
-That should have pulled application's dependencies (it depends only on [Infobip API client](https://github.com/infobip/infobip-api-java-client)) and built the application. As a result there should now be a `target` directory with, among other things, `DemoApp.jar` file in it. 
+That should have pulled application's dependencies (it depends on [Infobip API client](https://github.com/infobip/infobip-api-java-client)) and built the application. As a result there should now be a `target` directory with, among other things, `DemoApp.jar` file in it. 
 
 ## Running the app
 To run the app position yourself in the `target` directory and than execute:
