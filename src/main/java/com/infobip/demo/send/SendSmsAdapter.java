@@ -24,7 +24,8 @@ public class SendSmsAdapter {
      * Statuses from this group are interpreted as a success by this application. Note, however,
      * that statuses from this group are not final and the sms is not yet delivered. It's sending
      * may yet fail (if, for example, recipient of the sms turns of their phone).
-     *@see <a href="https://dev.infobip.com/docs/response-codes#section-statuses-groups">API documentation</a>
+     *
+     * @see <a href="https://dev.infobip.com/docs/response-codes#section-statuses-groups">API documentation</a>
      */
     public static final int STATUS_GROUP_ACCEPTED = 0;
 
@@ -34,7 +35,8 @@ public class SendSmsAdapter {
      * platform or by a network operator. Statuses from this group are interpreted as a success by
      * this application. Note, however, that statuses from this group are not final and the sms is not
      * yet delivered. It's sending may yet fail (if, for example, recipient of the sms turns of their phone).
-     *@see <a href="https://dev.infobip.com/docs/response-codes#section-statuses-groups">API documentation</a>
+     *
+     * @see <a href="https://dev.infobip.com/docs/response-codes#section-statuses-groups">API documentation</a>
      */
     public static final int STATUS_GROUP_PENDING = 1;
 
@@ -43,7 +45,8 @@ public class SendSmsAdapter {
      * Message in a status belonging to this group is considered delivered either to mobile phone of
      * it's recipient or to the operator, depending on the destination specified. Statuses in this group
      * are final and interpreted as a success by this application.
-     *@see <a href="https://dev.infobip.com/docs/response-codes#section-statuses-groups">API documentation</a>
+     *
+     * @see <a href="https://dev.infobip.com/docs/response-codes#section-statuses-groups">API documentation</a>
      */
     public static final int STATUS_GROUP_DELIVERED = 3;
 
@@ -52,7 +55,8 @@ public class SendSmsAdapter {
      * Message in a status belonging to this group was determined to be undeliverable. Sending might have
      * been attempted but the operator might have rejected the sms. Statuses in this group are final and
      * interpreted as a failure by this application.
-     *@see <a href="https://dev.infobip.com/docs/response-codes#section-statuses-groups">API documentation</a>
+     *
+     * @see <a href="https://dev.infobip.com/docs/response-codes#section-statuses-groups">API documentation</a>
      */
     public static final int STATUS_GROUP_UNDELIVERABLE = 2;
 
@@ -63,7 +67,8 @@ public class SendSmsAdapter {
      * turned off only to turn it on again) message could be successfully sent in subsequent retry. However,
      * if that does not happen nad allowed time period elapses retry will be terminated and message will be
      * considered expired. Statuses in this group are final and interpreted as a failure by this application.
-     *@see <a href="https://dev.infobip.com/docs/response-codes#section-statuses-groups">API documentation</a>
+     *
+     * @see <a href="https://dev.infobip.com/docs/response-codes#section-statuses-groups">API documentation</a>
      */
     public static final int STATUS_GROUP_EXPIRED = 4;
 
@@ -75,7 +80,8 @@ public class SendSmsAdapter {
      * there might be something wrong with your account's setup that results in message being rejected.
      * For example you might have spent all your credits and subsequent SMSes will fail with rejected status.
      * Statuses in this group are final and interpreted as a failure by this application.
-     *@see <a href="https://dev.infobip.com/docs/response-codes#section-statuses-groups">API documentation</a>
+     *
+     * @see <a href="https://dev.infobip.com/docs/response-codes#section-statuses-groups">API documentation</a>
      */
     public static final int STATUS_GROUP_REJECTED = 5;
 
@@ -96,11 +102,12 @@ public class SendSmsAdapter {
      * Method for sending the SMS message.
      * Note that this method makes an HTTP request to the Infobip API. This method will block during the
      * execution of that request and will return only when response from the API is received.
+     *
      * @param sms domain model representing SMS message to be sent.
      * @return domain model representing sent SMS message. It will contain a unique message id given to the sms by
      * Infobip platform. That id can later be used to fetch delivery report or log corresponding to this SMS.
      * @throws AuthenticationException if sending failed due to unauthorized status returned by the API
-     * @throws SmsSendingException if request to API failed or if consequent SMS sending failed
+     * @throws SmsSendingException     if request to API failed or if consequent SMS sending failed
      */
     public Sms sendSms(Sms sms) {
         SMSTextualRequest request = mapToApiModel(sms);
@@ -172,6 +179,7 @@ public class SendSmsAdapter {
 
     /**
      * Method used to map domain SMS model into the one expected by the API client.
+     *
      * @param sms domain SMS model
      * @return SMS model accepted by the API client
      */
@@ -184,6 +192,7 @@ public class SendSmsAdapter {
 
     /**
      * Method used to extracts first response details from sms sending response that has a collection of them.
+     *
      * @param smsSendingResponse API client's response to sending a message. It can contain multiple details.
      * @return first details found in the {@param response}
      */

@@ -23,8 +23,9 @@ public class SendSmsService extends Service<Sms> {
 
     /**
      * This method should be called before each invocation of {@link Service#start()} method.
+     *
      * @param smsToSend that is passed along to the {@link SendSmsAdapter#sendSms(Sms)} method from within the
-     * {@link Task}.
+     *                  {@link Task}.
      */
     public void setSmsToSend(Sms smsToSend) {
         this.smsToSend = smsToSend;

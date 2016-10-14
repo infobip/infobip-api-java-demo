@@ -18,12 +18,13 @@ public class DeliveryReport {
 
     /**
      * All arguments constructor used to create the value object.
-     * @param messageId id of the SMS message that this delivery report describes
-     * @param sentAt date of SMS message sending
-     * @param phoneNumber of the SMS recipient
-     * @param status name of the status that SMS is in
-     * @param statusDescription human readable description of the status that SMS is in
-     * @param gsmStatus name of the GSM standard status that SMS is in
+     *
+     * @param messageId            id of the SMS message that this delivery report describes
+     * @param sentAt               date of SMS message sending
+     * @param phoneNumber          of the SMS recipient
+     * @param status               name of the status that SMS is in
+     * @param statusDescription    human readable description of the status that SMS is in
+     * @param gsmStatus            name of the GSM standard status that SMS is in
      * @param gsmStatusDescription human readable description of the standard GSM status that SMS is in
      */
     public DeliveryReport(String messageId, Date sentAt, String phoneNumber, String status, String statusDescription,
@@ -40,6 +41,7 @@ public class DeliveryReport {
     /**
      * In the process of sending an SMS message Infobip will generate a unique id for it.
      * That id is later used to pair logs and delivery reports with the SMS message.
+     *
      * @return id of the SMS message that this delivery report describes.
      */
     public String getMessageId() {

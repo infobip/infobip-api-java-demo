@@ -23,8 +23,9 @@ public class SmsLogService extends Service<Log> {
 
     /**
      * This method should be called before each invocation of {@link Service#start()} method.
+     *
      * @param messageId that is passed along to the {@link SmsLogAdapter#getLogWithId(String)} method from within the
-     * {@link Task}.
+     *                  {@link Task}.
      */
     public void setMessageId(String messageId) {
         this.messageId = messageId;

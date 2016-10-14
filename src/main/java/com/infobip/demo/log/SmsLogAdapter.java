@@ -30,10 +30,11 @@ public class SmsLogAdapter {
      * Method for retrieving SMS logs.
      * Note that this method makes an HTTP request to the Infobip API. This method will block during the
      * execution of that request and will return only when response from the API is received.
+     *
      * @param messageId of the SMS who's log is to be retrieved
      * @return domain model representing log of SMS with specified by {@param messageId}
      * @throws AuthenticationException if retrieving SMS log failed due to unauthorized status returned by the API
-     * @throws LogFetchingException if request to API failed or no log was found given {@param messageId}
+     * @throws LogFetchingException    if request to API failed or no log was found given {@param messageId}
      */
     public Log getLogWithId(String messageId) {
         try {

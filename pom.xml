@@ -8,9 +8,9 @@
 	<artifactId>infobip-api-java-demo</artifactId>
 	<version>1.0.0-SNAPSHOT</version>
 	<name>Infobip API Java Demo Application</name>
-	<descirption>
+	<description>
 		Simple desktop application written in Java, illustrating integration with Infobip's SMS API.
-	</descirption>
+	</description>
 	<url>https://dev.infobip.com/</url>
 
 	<licenses>

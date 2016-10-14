@@ -7,7 +7,7 @@ import javafx.concurrent.Task;
 
 /**
  * DeliveryReportService extends {@link Service} and wraps invocation of
- * {@link DeliveryReportAdapter#getDeliveryReportWithId(String)} into a {@link Task} so that the blockin
+ * {@link DeliveryReportAdapter#getDeliveryReportWithId(String)} into a {@link Task} so that the blocking
  * getDeliveryReportWithId can be processed of the UI thread.
  */
 public class DeliveryReportService extends Service<DeliveryReport> {
@@ -24,6 +24,7 @@ public class DeliveryReportService extends Service<DeliveryReport> {
 
     /**
      * This method should be called before each invocation of {@link Service#start()} method.
+     *
      * @param messageId that is passed along to the {@link DeliveryReportAdapter#getDeliveryReportWithId(String)}
      *                  method from within {@link Task}.
      */

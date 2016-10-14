@@ -31,6 +31,7 @@ public class DeliveryReportView extends View<DeliveryReportController> {
     }
 
     public void showLog(DeliveryReport deliveryReport) {
+        searchInput.setText(deliveryReport.getMessageId());
         errorMessage.setVisible(false);
 
         messageId.setText(deliveryReport.getMessageId());
@@ -42,7 +43,6 @@ public class DeliveryReportView extends View<DeliveryReportController> {
         gsmStatusDescription.setText(deliveryReport.getGsmStatusDescription());
 
         gridPane.setVisible(true);
-        searchInput.setText(deliveryReport.getMessageId());
     }
 
     @Override

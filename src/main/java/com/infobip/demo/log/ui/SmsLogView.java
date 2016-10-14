@@ -28,6 +28,7 @@ public class SmsLogView extends View<SmsLogController> {
     }
 
     public void showLog(Log log) {
+        searchInput.setText(log.getMessageId());
         errorMessage.setVisible(false);
 
         messageId.setText(log.getMessageId());
@@ -37,7 +38,6 @@ public class SmsLogView extends View<SmsLogController> {
         status.setText(log.getStatus());
 
         gridPane.setVisible(true);
-        searchInput.setText(log.getMessageId());
     }
 
     @Override

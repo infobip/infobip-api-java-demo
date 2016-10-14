@@ -16,11 +16,12 @@ public class Log {
 
     /**
      * All arguments constructor used to create the value object.
-     * @param messageId id of the SMS message that this is the log of
-     * @param sentAt date of SMS sending
-     * @param message text of the SMS
+     *
+     * @param messageId   id of the SMS message that this is the log of
+     * @param sentAt      date of SMS sending
+     * @param message     text of the SMS
      * @param phoneNumber of SMS recipient
-     * @param status name of the status that SMS is in
+     * @param status      name of the status that SMS is in
      */
     public Log(String messageId, Date sentAt, String message, String phoneNumber, String status) {
         this.messageId = messageId;
@@ -33,6 +34,7 @@ public class Log {
     /**
      * In the process of sending an SMS message Infobip will generate a unique id for it.
      * That id is later used to pair logs and delivery reports with the SMS message.
+     *
      * @return id of the SMS message that this is the log of.
      */
     public String getMessageId() {
@@ -47,7 +49,7 @@ public class Log {
     }
 
     /**
-      * @return SMS text
+     * @return SMS text
      */
     public String getMessage() {
         return message;

@@ -30,10 +30,11 @@ public class DeliveryReportAdapter {
      * Method for retrieving the delivery report.
      * Note that this method makes an HTTP request to the Infobip API. This method will block during the
      * execution of that request and will return only when response from the API is received
+     *
      * @param messageId of the SMS message who's delivery report is to be retrieved
      * @return domain model representing delivery report of SMS with id specified by {@param messageId}
      * @throws AuthenticationException if retrieving delivery report filed due to unauthorized status returned by the
-     * API
+     *                                 API
      * @throws ReportNotFoundException if no delivery report is found for given {@param messageId}
      * @throws ReportFetchingException if request to API failed
      */
