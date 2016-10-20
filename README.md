@@ -8,14 +8,14 @@ Simple desktop application written in Java, illustrating integration with Infobi
 * Maven version 3. You can find download instructions at 
 [Maven Project downloads page](http://maven.apache.org/download.cgi) and for installation instructions take a look at
  [installation guide](http://maven.apache.org/install.html)
-* Git, which if you do not already have you can find ad [git downloads page](https://git-scm.com/downloads)
+* Git, which if you do not already have you can find at [git downloads page](https://git-scm.com/downloads)
 
 To check if you have all the requirements installed you can check for their versions.
 To do that on a Windows run Command Prompt (you can easily do that by pressing `WinKey+R` to open a Run window, 
 typing `cmd` in the input text field and pressing `Enter`). With the terminal running you can check for the versions 
 of programs installed and configured on your computer.
 
-To check your Java version execute:
+To check your version of Java execute:
 ```
 java -version
 ```
@@ -26,7 +26,7 @@ Java(TM) SE Runtime Environment (build 1.8.0_31-b13)
 Java HotSpot(TM) 64-Bit Server VM (build 25.31-b07, mixed mode)
 ```
 
-To your version of Maven execute:
+To check your version of Maven execute:
 ```
 mvn --version
 ```
@@ -39,7 +39,7 @@ Java home: C:\Program Files\Java\jdk1.8.0_25\jre
 Default locale: en_US, platform encoding: Cp1250
 OS name: "windows 8.1", version: "6.3", arch: "amd64", family: "dos"
 ```
-To your version of git execute:
+To check your version of Git execute:
 ```
 git --version
 ```
@@ -49,10 +49,10 @@ git version 1.8.4.msysgit.0
 ```
 
 ## Building the app
-First step is getting the source to your computer. To achieve this you can either download a ZIP archive from this 
-GitHub page and unzip it, or use `git` to clone the repository. To clone it using git open your terminal, position 
-yourself in the directory that you want the project to be downloaded to and execute `git clone` command. It should 
-look like this:
+The first step is downloading the source code to your computer. To achieve this you can either download a ZIP archive from 
+this GitHub page and unzip it, or use `Git` to clone the repository. To clone it using Git open your terminal, position 
+yourself in the directory that you want the project to be downloaded to and execute `git clone` command. It should look 
+like this:
 ```
 C:\>git clone https://github.com/infobip/infobip-api-java-demo.git
 Cloning into 'infobip-api-java-demo'...
@@ -63,7 +63,7 @@ Receiving objects: 100% (116/116), 32.81 KiB | 0 bytes/s, done.
 Resolving deltas: 100% (51/51), done.
 Checking connectivity... done
 ```
-`git` has now created a new directory, named `infobip-api-java-demo`, and downloaded the contents of this repo to it.
+Git has now created a new directory, named `infobip-api-java-demo`, and downloaded the contents of this repo to it.
 Position yourself in the newly created directory and verify that the files are there. On Windows it should look like 
 this:
 ```
@@ -83,9 +83,9 @@ C:\infobip-api-java-demo>dir
                3 Dir(s)   9,403,285,504 bytes free
 ```
 
-Now that you have the source code downloaded to your computer you can build it by executing `mvn install` command in 
-`infobip-api-java-demo` directory. This will produce many lines of output code, but the begging and end should look 
-like this:
+Now that you have the source code downloaded to your computer, you can build it by executing `mvn install` command in 
+`infobip-api-java-demo` directory. This will produce many lines of output code, but the beginning and the end should 
+look like this:
 ```
 C:\infobip-api-java-demo>mvn install
 [INFO] Scanning for projects...
@@ -110,7 +110,7 @@ C:\infobip-api-java-demo>mvn install
 
 ```
 
-New directory named `target` should now exist in your root project directory. You can enter it and list it's content:
+A new directory named `target` should now exist in your root project directory. You can enter it and list its contents:
 ```
 C:\infobip-api-java-demo>cd target
 
