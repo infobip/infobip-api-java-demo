@@ -11,8 +11,8 @@ public class Sms {
     private final String phoneNumber;
 
     /**
-     * Use this constructor to create a domain SMS model after sending when
-     * Infobip has provided unique id of the SMS message.
+     * Use this constructor to create a domain SMS model after sending when Infobip has provided unique id of the SMS
+     * message.
      *
      * @param id
      * @param message     text sent via the SMS
@@ -35,8 +35,8 @@ public class Sms {
     }
 
     /**
-     * In the process of sending an SMS message Infobip will generate a unique id for it.
-     * That id is later used to refer to the message when retrieving logs od delivery reports.
+     * In the process of sending an SMS message Infobip will generate a unique id for it. That id is later used to
+     * refer to the message when retrieving logs od delivery reports.
      *
      * @return unique id of the SMS message
      */

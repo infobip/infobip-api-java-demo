@@ -4,7 +4,7 @@ import javafx.scene.layout.Pane;
 
 /**
  * Custom view abstraction extended by the concrete view classes in this application. It holds a reference to
- * instance of a controller of type {@param <T>} in charge with controlling this view.
+ * instance of a controller of type {@code T} in charge with controlling this view.
  * {@link View} also defines two abstract methods that make working with views easier and standardized.
  *
  * @param <T> concrete type of the controller in change of this view
@@ -38,7 +38,7 @@ public abstract class View<T extends Controller> {
     public abstract Pane getPane();
 
     /**
-     * Use this method to instruct this view to show provided {@param errorMessage} String as an error
+     * Use this method to instruct this view to show provided {@code errorMessage} String as an error
      *
      * @param errorMessage text to be shown with error style
      */

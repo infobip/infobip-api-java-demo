@@ -2,7 +2,7 @@ package com.infobip.demo.common.ui;
 
 /**
  * Custom controller abstraction extended by the concrete controller classes in this application. It holds the
- * reference to instance of view of type {@param <T>} that this controller is in charge of and defines a single
+ * reference to instance of view of type {@code T} that this controller is in charge of and defines a single
  * method for setting the said view.
  *
  * @param <T> concrete type of the view that this controller is in charge of

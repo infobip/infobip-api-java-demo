@@ -3,6 +3,7 @@ package com.infobip.demo.login.ui;
 import com.infobip.demo.common.ConfigurationHolder;
 import com.infobip.demo.common.Navigator;
 import com.infobip.demo.common.ui.Controller;
+import infobip.api.config.ApiKeyAuthConfiguration;
 import infobip.api.config.BasicAuthConfiguration;
 import infobip.api.config.Configuration;
 
@@ -17,10 +18,10 @@ public class LoginController extends Controller<LoginView> {
     }
 
     /**
-     * Uses {@param username} and {@param password} to create a new instance of {@link BasicAuthConfiguration} that
-     * is then registered with the {@link ConfigurationHolder}. In production application this would be the point
-     * where credentials are checked with some local storage and API requests would be authenticated by using API key
-     * . In that scenario an instance of {@link infobip.api.config.ApiKeyAuthConfiguration} would be used. For the
+     * Uses {@code username} and {@code password} to create a new instance of {@link BasicAuthConfiguration} that
+     * is registered with the {@link ConfigurationHolder}. In production application this would be the point
+     * where credentials are checked with some local storage and API requests would be authenticated using API key.
+     * In that scenario an instance of {@link ApiKeyAuthConfiguration} would be used. For the
      * sake of simplicity this demo application uses a simple username and password based authentication.
      * Furthermore, credentials entered by the user are not checked immediately, but only later when actual API
      * requests are made during SMS sending or logs, delivery reports retrieval. For more details on authorization

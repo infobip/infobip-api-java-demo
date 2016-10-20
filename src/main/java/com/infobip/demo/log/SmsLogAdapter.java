@@ -7,9 +7,9 @@ import infobip.api.model.sms.mt.logs.SMSLogsResponse;
 import retrofit.RetrofitError;
 
 /**
- * Class providing an adapter between Infobip API client and the rest of the application.
- * It's meant to map domain models of the application into models used by the API client.
- * Additionally it parses responses and exceptions that arise from invoking API methods.
+ * Class providing an adapter between Infobip API client and the rest of the application. It's meant to map domain
+ * models of the application into models used by the API client. Additionally it parses responses and exceptions that
+ * arise from invoking API methods.
  */
 public class SmsLogAdapter {
 
@@ -32,9 +32,9 @@ public class SmsLogAdapter {
      * execution of that request and will return only when response from the API is received.
      *
      * @param messageId of the SMS who's log is to be retrieved
-     * @return domain model representing log of SMS with specified by {@param messageId}
+     * @return domain model representing log of SMS with specified by {@code messageId}
      * @throws AuthenticationException if retrieving SMS log failed due to unauthorized status returned by the API
-     * @throws LogFetchingException    if request to API failed or no log was found given {@param messageId}
+     * @throws LogFetchingException    if request to API failed or no log was found given {@code messageId}
      */
     public Log getLogWithId(String messageId) {
         try {

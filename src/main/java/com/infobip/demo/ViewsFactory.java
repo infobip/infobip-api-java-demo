@@ -17,7 +17,8 @@ import infobip.api.config.Configuration;
  * ViewsFactory is non-instantiable class that consists of a few static methods used to create instances of
  * {@link com.infobip.demo.common.ui.View} classes used in this application. In a production grade application this
  * class could be replaced by the use of dependency injection framework like Spring or Dagger to name a few. For
- * simplicity sake, and because dependencies between
+ * simplicity sake, and because dependencies between components of this application are relatively simple, this task
+ * of instantiating and wiring is achieved manually.
  */
 public class ViewsFactory {
 
@@ -32,7 +33,7 @@ public class ViewsFactory {
      * necessary.
      *
      * @param configurationHolder used in the log in process to store the configuration filled with login credentials
-     * @param navigator           used to proceed to the next after login flow completes
+     * @param navigator           used to navigate to the next view after login flow completes
      * @return login view used to generate a JavaFX scene graph for the log in input form
      */
     public static LoginView getLoginView(ConfigurationHolder configurationHolder, Navigator navigator) {

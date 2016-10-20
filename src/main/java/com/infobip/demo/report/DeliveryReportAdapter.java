@@ -7,9 +7,9 @@ import infobip.api.model.sms.mt.reports.SMSReportResponse;
 import retrofit.RetrofitError;
 
 /**
- * Class providing an adapter between Infobip API client and the rest of the application.
- * It's meant to map domain models of the application into models used by the API client.
- * Additionally it parses responses and exceptions that arise from invoking API methods.
+ * Class providing an adapter between Infobip API client and the rest of the application. It's meant to map domain
+ * models of the application into models used by the API client. Additionally it parses responses and exceptions
+ * that arise from invoking API methods.
  */
 public class DeliveryReportAdapter {
 
@@ -32,10 +32,10 @@ public class DeliveryReportAdapter {
      * execution of that request and will return only when response from the API is received
      *
      * @param messageId of the SMS message who's delivery report is to be retrieved
-     * @return domain model representing delivery report of SMS with id specified by {@param messageId}
+     * @return domain model representing delivery report of SMS with id specified by {@code messageId}
      * @throws AuthenticationException if retrieving delivery report filed due to unauthorized status returned by the
      *                                 API
-     * @throws ReportNotFoundException if no delivery report is found for given {@param messageId}
+     * @throws ReportNotFoundException if no delivery report is found for given {@code messageId}
      * @throws ReportFetchingException if request to API failed
      */
     public DeliveryReport getDeliveryReportWithId(String messageId) {

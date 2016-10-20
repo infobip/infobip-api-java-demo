@@ -15,7 +15,7 @@ To do that on a Windows run Command Prompt (you can easily do that by pressing `
 typing `cmd` in the input text field and pressing `Enter`). With the terminal running you can check for the versions 
 of programs installed and configured on your computer.
 
-To check the version of java that you have execute:
+To check your Java version execute:
 ```
 java -version
 ```
@@ -26,7 +26,7 @@ Java(TM) SE Runtime Environment (build 1.8.0_31-b13)
 Java HotSpot(TM) 64-Bit Server VM (build 25.31-b07, mixed mode)
 ```
 
-To check the version of maven execute:
+To your version of Maven execute:
 ```
 mvn --version
 ```
@@ -39,7 +39,7 @@ Java home: C:\Program Files\Java\jdk1.8.0_25\jre
 Default locale: en_US, platform encoding: Cp1250
 OS name: "windows 8.1", version: "6.3", arch: "amd64", family: "dos"
 ```
-To check the version of git execute:
+To your version of git execute:
 ```
 git --version
 ```
@@ -50,7 +50,7 @@ git version 1.8.4.msysgit.0
 
 ## Building the app
 First step is getting the source to your computer. To achieve this you can either download a ZIP archive from this 
-githup page and unzip it, or use `git` to clone the repository. To clone it using git open your terminal, position 
+GitHub page and unzip it, or use `git` to clone the repository. To clone it using git open your terminal, position 
 yourself in the directory that you want the project to be downloaded to and execute `git clone` command. It should 
 look like this:
 ```
@@ -133,7 +133,7 @@ C:\infobip-api-java-demo\target>dir
 Note the file named `DemoApp.jar`. You can use it to run the application.
 
 ## Running the app
-To run the installed application position yourself in the `targe` directory within your root project directory. If 
+To run the installed application position yourself in the `target` directory within your root project directory. If 
 you were following previous steps you should already be positioned appropriately. From there simply run the app using
  `java -jar` command:
 ```

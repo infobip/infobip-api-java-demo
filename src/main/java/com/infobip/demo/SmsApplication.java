@@ -21,12 +21,13 @@ import javafx.stage.Stage;
 public class SmsApplication extends Application implements Navigator, ConfigurationHolder {
 
     /**
-     * Configuration instance is saved here and made available to the other parts of the application that depend on it.
+     * Configuration instance is saved here as part of the log in flow and made available to the other parts of the
+     * application that depend on it for making API requests.
      */
     private Configuration configuration;
 
     /**
-     * JavaFX {@link Stage} attached to the only window that this application uses.
+     * JavaFX {@link Stage} attached to the window that this application uses.
      * It is used to draw specific log in, send sms and other forms on screen.
      */
     private Stage primaryStage;
@@ -40,7 +41,7 @@ public class SmsApplication extends Application implements Navigator, Configurat
     private DeliveryReportController deliveryReportController;
 
     /**
-     * Starts the demo application
+     * Starts the demo application.
      *
      * @param args
      */
@@ -52,7 +53,7 @@ public class SmsApplication extends Application implements Navigator, Configurat
     public void start(Stage primaryStage) throws Exception {
         /*
         Reference to the primaryStage is saved for changing the content it displays later on in the application
-        lifecycle
+        lifecycle.
         */
         this.primaryStage = primaryStage;
 
@@ -61,7 +62,9 @@ public class SmsApplication extends Application implements Navigator, Configurat
         primaryStage.setHeight(460);
         primaryStage.setResizable(false);
 
-        //Log in form is shown when opening the application
+        /*
+        Log in form is shown when opening the application.
+         */
         navigateToLogin(null);
 
         primaryStage.show();
@@ -81,12 +84,12 @@ public class SmsApplication extends Application implements Navigator, Configurat
         View loginView = ViewsFactory.getLoginView(this, this);
 
         /*
-        New scene is created and populated by the form obtained from loginView
+        New scene is created and populated by the pane obtained from loginView.
          */
         primaryStage.setScene(new Scene(loginView.getPane()));
 
         /*
-        Optional error message is immediately shown
+        Optional error message is passed on to the view to be shown immediately.
          */
         loginView.showErrorMessage(errorMessage);
     }
@@ -103,7 +106,7 @@ public class SmsApplication extends Application implements Navigator, Configurat
         tabPane = new TabPane();
 
         /*
-        View instantiation is left to the factory method. As this class implements Navigator interface this reference
+        View instantiations are left to factory methods. As this class implements Navigator interface this reference
          is passed as the second parameter.
          */
         SendSmsView sendSmsView = ViewsFactory.getSendSmsView(configuration, this);
@@ -150,7 +153,7 @@ public class SmsApplication extends Application implements Navigator, Configurat
     }
 
     /**
-     * Creates a new unclosable tab and populates it with {@link javafx.scene.layout.Pane} provided by the {@param
+     * Creates a new unclosable tab and populates it with {@link javafx.scene.layout.Pane} provided by the {@code
      * view}.
      *
      * @param view    that provides the content of the tab
@@ -162,7 +165,7 @@ public class SmsApplication extends Application implements Navigator, Configurat
         tab.setClosable(false);
 
         /*
-        Newly created tab is populated by the form obtained from the view
+        Newly created tab is populated by the pane obtained from the view.
          */
         tab.setContent(view.getPane());
 
