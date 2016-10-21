@@ -45,7 +45,7 @@ git --version
 ```
 The result should look something like this:
 ```
-git version 1.8.4.msysgit.0
+git version 2.9.3.windows.1
 ```
 
 ## Building the app
