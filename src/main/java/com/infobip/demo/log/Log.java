@@ -17,7 +17,7 @@ public class Log {
     /**
      * All arguments constructor used to create the value object.
      *
-     * @param messageId   id of the SMS message that this is the log of
+     * @param messageId   id of the SMS message of this log
      * @param sentAt      date of SMS sending
      * @param message     text of the SMS
      * @param phoneNumber of SMS recipient
@@ -56,7 +56,7 @@ public class Log {
     }
 
     /**
-     * @return phone number of SMS' recipient. During the sending of an SMS phone number might be reformatted by the
+     * @return phone number of SMS' recipient. During the sending of an SMS, the phone number might be reformatted by
      * Infobip into canonical format. This property will be in that format.
      */
     public String getPhoneNumber() {

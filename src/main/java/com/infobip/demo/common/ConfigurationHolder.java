@@ -3,7 +3,7 @@ package com.infobip.demo.common;
 import infobip.api.config.Configuration;
 
 /**
- * ConfigurationHolder interface abstracts the logic of saving the configuration that can be reused thorough the
+ * ConfigurationHolder interface abstracts the logic of saving the configuration that can be reused through the
  * application.
  */
 public interface ConfigurationHolder {

@@ -1,7 +1,7 @@
 package com.infobip.demo.report;
 
 /**
- * Domain exception indicating that retrieval of the delivery report failed. It can be thrown by
+ * Domain exception indicating that the retrieval of the delivery report failed. It can be thrown by
  * {@link DeliveryReportAdapter#getDeliveryReportWithId(String)} method.
  */
 public class ReportFetchingException extends RuntimeException {

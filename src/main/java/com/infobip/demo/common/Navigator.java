@@ -18,18 +18,18 @@ public interface Navigator {
     void navigateToTabs();
 
     /**
-     * With tabs view currently showing invoke this method to activate SMS log tab.
+     * With tabs view currently showing, invoke this method to activate the SMS log tab.
      *
      * @param messageId optionally provide messageId to automatically search for log with that id
-     * @throws IllegalStateException in case tabs view is not initialized
+     * @throws IllegalStateException in case the tab view is not initialized
      */
     void navigateToSmsLogTab(String messageId);
 
     /**
-     * With tabs view currently showing invoke this method to activate delivery reports tab.
+     * With tabs view currently showing, invoke this method to activate the delivery reports tab.
      *
      * @param messageId optionally provide messageId to automatically search for delivery report with that id
-     * @throws IllegalStateException in case tabs view is not initialized
+     * @throws IllegalStateException in case the tab view is not initialized
      */
     void navigateToDeliveryReportTab(String messageId);
 

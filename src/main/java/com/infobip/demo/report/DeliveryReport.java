@@ -56,8 +56,8 @@ public class DeliveryReport {
     }
 
     /**
-     * @return phone number of SMS' recipient. During the sending of an SMS phone number might be reformatted by the
-     * Infobip into canonical format . This property will be in that format.
+     * @return phone number of SMS' recipient. During the sending of an SMS, the phone number might be reformatted by
+     * Infobip into canonical format. This property will be in that format.
      */
     public String getPhoneNumber() {
         return phoneNumber;

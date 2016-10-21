@@ -17,7 +17,7 @@ import infobip.api.config.Configuration;
  * ViewsFactory is non-instantiable class that consists of a few static methods used to create instances of
  * {@link com.infobip.demo.common.ui.View} classes used in this application. In a production grade application this
  * class could be replaced by the use of dependency injection framework like Spring or Dagger to name a few. For
- * simplicity sake, and because dependencies between components of this application are relatively simple, this task
+ * simplicity's sake, and because dependencies between components of this application are relatively simple, this task
  * of instantiating and wiring is achieved manually.
  */
 public class ViewsFactory {
@@ -29,7 +29,7 @@ public class ViewsFactory {
     }
 
     /**
-     * This method returns an instantiate of {@link LoginView} with all of it's dependencies set, creating them as
+     * This method returns an instance of {@link LoginView} with all of its dependencies set, creating them as
      * necessary.
      *
      * @param configurationHolder used in the log in process to store the configuration filled with login credentials
@@ -44,11 +44,11 @@ public class ViewsFactory {
     }
 
     /**
-     * This method returns an instantiate of {@link SendSmsView} with all of it's dependencies set, creating them as
+     * This method returns an instance of {@link SendSmsView} with all of its dependencies set, creating them as
      * necessary.
      *
-     * @param configuration used to configure Infobip API client passing, among other things, the user credentials used
-     *                      in API requests
+     * @param configuration used to configure the Infobip API client. Contains, among other things, the user credentials
+     *                      used in API requests.
      * @param navigator     used to navigate to log and delivery report views after successful SMS sending, or to the
      *                      login view after authorization error
      * @return send sms view used to generate a JavaFX scene graph for the send sms input form
@@ -63,13 +63,13 @@ public class ViewsFactory {
     }
 
     /**
-     * This method returns an instantiate of {@link SmsLogView} with all of it's dependencies set, creating them as
+     * This method returns an instance of {@link SmsLogView} with all of its dependencies set, creating them as
      * necessary.
      *
-     * @param configuration used to configure Infobip API client passing, among other things, the user credentials used
-     *                      in API requests
+     * @param configuration used to configure the Infobip API client. Contains, among other things, the user credentials
+     *                      used in API requests
      * @param navigator     used to navigate to login view after authorization error
-     * @return logs view used to generate a JavaFX scene graph for the sms log search and preview form
+     * @return log view used to generate a JavaFX scene graph for the sms log search and preview form
      */
     public static SmsLogView getSmsLogView(Configuration configuration, Navigator navigator) {
         SmsLogAdapter adapter = new SmsLogAdapter(new GetSentSmsLogs(configuration));
@@ -81,11 +81,11 @@ public class ViewsFactory {
     }
 
     /**
-     * This method returns an instantiate of {@link DeliveryReportView} with all of it's dependencies set, creating
+     * This method returns an instance of {@link DeliveryReportView} with all of its dependencies set, creating
      * them as necessary.
      *
-     * @param configuration used to configure Infobip API client passing, among other things, the user credentials used
-     *                      in API requests
+     * @param configuration used to configure the Infobip API client. Contains, among other things, the user credentials
+     *                      used in API requests
      * @param navigator     used to navigate to login view after authorization error
      * @return delivery report view used to generate a JavaFX scene graph for the delivery report search and preview
      * form

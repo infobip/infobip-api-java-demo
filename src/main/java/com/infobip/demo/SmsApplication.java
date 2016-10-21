@@ -21,7 +21,7 @@ import javafx.stage.Stage;
 public class SmsApplication extends Application implements Navigator, ConfigurationHolder {
 
     /**
-     * Configuration instance is saved here as part of the log in flow and made available to the other parts of the
+     * Configuration instance is saved here as part of the log in flow and is made available to the other parts of the
      * application that depend on it for making API requests.
      */
     private Configuration configuration;
@@ -63,7 +63,7 @@ public class SmsApplication extends Application implements Navigator, Configurat
         primaryStage.setResizable(false);
 
         /*
-        Log in form is shown when opening the application.
+        Log in form without error messages is shown when opening the application.
          */
         navigateToLogin(null);
 
@@ -79,7 +79,7 @@ public class SmsApplication extends Application implements Navigator, Configurat
     public void navigateToLogin(String errorMessage) {
         /*
         View instantiation is left to the factory method. As this class implements both ConfigurationHolder and
-        Navigator interfaces this reference is passed as doth parameters of the getLoginView method.
+        Navigator interfaces, reference to this object is passed as both parameters of the getLoginView method.
          */
         View loginView = ViewsFactory.getLoginView(this, this);
 
@@ -98,16 +98,16 @@ public class SmsApplication extends Application implements Navigator, Configurat
     public void navigateToTabs() {
         if (configuration == null) {
             /*
-            If by this point in the application lifecycle configuration has not been provided user is returned to the
-            login form to fill it. That results in configuration being set.
+            If by this point in the application lifecycle the configuration has not been provided, the user is returned
+            to the login form to fill it. That results in the configuration being set.
              */
             navigateToLogin("Login required.");
         }
         tabPane = new TabPane();
 
         /*
-        View instantiations are left to factory methods. As this class implements Navigator interface this reference
-         is passed as the second parameter.
+        View instantiations are left to factory methods. As this class implements the Navigator interface, reference to
+        this object is passed as the second parameter.
          */
         SendSmsView sendSmsView = ViewsFactory.getSendSmsView(configuration, this);
         tabPane.getTabs().add(createTab(sendSmsView, "Send sms"));
@@ -121,7 +121,7 @@ public class SmsApplication extends Application implements Navigator, Configurat
         tabPane.getTabs().addAll(createTab(deliveryReportView, "Delivery report"));
 
         /*
-        New scene is created and populated by previously created tabPane
+        New scene is created and populated by the previously created tabPane.
          */
         primaryStage.setScene(new Scene(tabPane));
     }
@@ -135,6 +135,9 @@ public class SmsApplication extends Application implements Navigator, Configurat
             navigateToTabs();
         }
 
+        /*
+        Selects the sms log tab.
+         */
         tabPane.getSelectionModel().select(1);
         smsLogController.findLog(messageId);
     }
@@ -148,6 +151,9 @@ public class SmsApplication extends Application implements Navigator, Configurat
             navigateToTabs();
         }
 
+        /*
+        Selects the delivery report tab.
+         */
         tabPane.getSelectionModel().select(2);
         deliveryReportController.findDeliveryReport(messageId);
     }

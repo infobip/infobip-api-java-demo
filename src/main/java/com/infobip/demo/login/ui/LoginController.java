@@ -21,10 +21,10 @@ public class LoginController extends Controller<LoginView> {
      * Uses {@code username} and {@code password} to create a new instance of {@link BasicAuthConfiguration} that
      * is registered with the {@link ConfigurationHolder}. In production application this would be the point
      * where credentials are checked with some local storage and API requests would be authenticated using API key.
-     * In that scenario an instance of {@link ApiKeyAuthConfiguration} would be used. For the
-     * sake of simplicity this demo application uses a simple username and password based authentication.
+     * In that scenario an instance of {@link ApiKeyAuthConfiguration} would be used. For the sake of simplicity,
+     * this demo application uses a simple username and password based authentication.
      * Furthermore, credentials entered by the user are not checked immediately, but only later when actual API
-     * requests are made during SMS sending or logs, delivery reports retrieval. For more details on authorization
+     * requests are made during SMS sending or logs and delivery reports retrieval. For more details on authorization
      * supported by the Infobip API visit
      * <a href="https://dev.infobip.com/docs/getting-started#authorization">documentation</a>.
      *
@@ -44,14 +44,14 @@ public class LoginController extends Controller<LoginView> {
         Configuration configuration = new BasicAuthConfiguration(username, password);
 
         /*
-        Once created configuration is registered with the configurationHolder. From there it can be used by the rest
-        of the application as needed.
+        Once created, the configuration is registered with the configurationHolder. From there it can be used by the
+        rest of the application as needed.
          */
         configurationHolder.registerConfiguration(configuration);
 
         /*
-        After user entered their username and password application proceeds to the tabs view from where SMS messages
-        can be sent and logs and delivery reports retrieved.
+        After the user entered their username and password, the application proceeds to the tab view. From there the
+        user can send SMS messages and retrieve logs and delivery reports.
          */
         navigator.navigateToTabs();
     }

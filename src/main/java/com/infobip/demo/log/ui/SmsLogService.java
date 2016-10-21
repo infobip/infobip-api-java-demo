@@ -7,7 +7,7 @@ import javafx.concurrent.Task;
 
 /**
  * SmsLogService extends {@link Service} and wraps invocation of {@link SmsLogAdapter#getLogWithId(String)} into a
- * {@link Task}  so that the blocking getLogWithId method can be processed of the UI thread.
+ * {@link Task} so that the blocking getLogWithId method can be processed off the UI thread.
  */
 public class SmsLogService extends Service<Log> {
 

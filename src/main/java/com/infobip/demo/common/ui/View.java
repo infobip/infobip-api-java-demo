@@ -31,14 +31,14 @@ public abstract class View<T extends Controller> {
     }
 
     /**
-     * Use this method to get {@link Pane} instance that can be added to JavaFX scene graph
+     * Use this method to get {@link Pane} instance that can be added to JavaFX scene graph.
      *
      * @return JavaFX representation of this view
      */
     public abstract Pane getPane();
 
     /**
-     * Use this method to instruct this view to show provided {@code errorMessage} String as an error
+     * Use this method to instruct this view to show provided {@code errorMessage} String as an error.
      *
      * @param errorMessage text to be shown with error style
      */

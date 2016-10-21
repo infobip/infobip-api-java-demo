@@ -70,8 +70,8 @@ public class DeliveryReportController extends Controller<DeliveryReportView> {
                 return;
             } else if (exception instanceof ReportNotFoundException) {
                 errorMessage = "Delivery report for " + messageId + " was not found.\n" +
-                        "Perhaps it did not yet arrive or has already been collected.\n" +
-                        "Remember: delivery report can be received only once per sms.";
+                        "Perhaps it did not arrive yet or has already been collected.\n" +
+                        "Remember: a delivery report can be received only once per SMS.";
             } else {
                 errorMessage += " because " + exception.getLocalizedMessage();
             }

@@ -11,10 +11,10 @@ public class Sms {
     private final String phoneNumber;
 
     /**
-     * Use this constructor to create a domain SMS model after sending when Infobip has provided unique id of the SMS
+     * Use this constructor to create a domain SMS model after sending, when Infobip has provided unique id of the SMS
      * message.
      *
-     * @param id
+     * @param id          unique id of the SMS message
      * @param message     text sent via the SMS
      * @param phoneNumber that SMS was sent to
      */
@@ -25,7 +25,7 @@ public class Sms {
     }
 
     /**
-     * Use this constructor to create a domain SMS model before sending it when id is unknown.
+     * Use this constructor to create a domain SMS model before sending it, when id is unknown.
      *
      * @param message     to be sent via SMS
      * @param phoneNumber of SMS' recipient
@@ -35,8 +35,8 @@ public class Sms {
     }
 
     /**
-     * In the process of sending an SMS message Infobip will generate a unique id for it. That id is later used to
-     * refer to the message when retrieving logs od delivery reports.
+     * In the process of sending an SMS message, Infobip will generate a unique id for it. That id is later used to
+     * refer to the message when retrieving its delivery report or logs.
      *
      * @return unique id of the SMS message
      */

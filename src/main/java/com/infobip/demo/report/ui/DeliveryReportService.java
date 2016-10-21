@@ -8,7 +8,7 @@ import javafx.concurrent.Task;
 /**
  * DeliveryReportService extends {@link Service} and wraps invocation of
  * {@link DeliveryReportAdapter#getDeliveryReportWithId(String)} into a {@link Task} so that the blocking
- * getDeliveryReportWithId can be processed of the UI thread.
+ * getDeliveryReportWithId can be processed off the UI thread.
  */
 public class DeliveryReportService extends Service<DeliveryReport> {
 
