@@ -141,3 +141,19 @@ C:\infobip-api-java-demo\target>java -jar DemoApp.jar
 ```
 That should start the app and present you with the log in screen. There you can enter your Infobip account 
 credentials and start playing around with sending SMSes and reviewing logs and delivery reports.
+
+## Used technologies
+
+The application is a simple desktop program written in Java. For communicating with the Infobip APIs the application uses Infobip’s [java API client library](https://github.com/infobip/infobip-api-java-client). Core business logic is implemented in the adapter classes, e.g. `SendSmsAdapter.java`. Check out those classes to find out how best to use the API client. Along with the code itself, there are abundant comments and documentation for clarifying every part of the implementation as well as the behavior of the API client library.
+
+The user interface is implemented using the [JavaFX](https://en.wikipedia.org/wiki/JavaFX) framework that comes bundled with the Java version 8. The interface itself is kept basic and the code related to the JavaFX is separated neatly into user interface packages.
+
+> Note that there are other online sources for documentation and examples on how to architect applications based on [JavaFX](http://docs.oracle.com/javafx/2/get_started/jfxpub-get_started.htm) and this demo app does not try to instruct you on that subject. Nevertheless, it does use a clean approach in its setup and can be used as a starting point for your own project.
+
+## Basic code structure
+
+The application code itself is structured in [per feature packages](http://www.javapractices.com/topic/TopicAction.do?Id=205). That means that all of the code related to, for example, sending of SMS is grouped in a package called `send`. Therein you can find before mentioned `SendSmsAdapter.java` class that implements calls to the Infobip API client library, along with a [POJO](https://en.wikipedia.org/wiki/Plain_Old_Java_Object) (Plain Old Java Object) class used to represent the SMS message in the demo application and an exception class used to indicate problem encountered while sending messages.
+
+Additionally, send package has a UI (user interface) package inside of it that holds classes implementing parts of the JavaFX framework needed to render the send SMS form and handle user input. You’ll find a similar structure in the other top-level packages, namely `log` and `report`.
+
+A package named `common` houses interfaces and abstract classes used throughout the rest of the application. `SmsApplication.java` is the starting point of the application and implements Java’s main method as well as the JavaFX setup.
